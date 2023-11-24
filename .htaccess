@@ -1,0 +1,7 @@
+#URL mapping for REST API ASSSIGNMENT 6
+RewriteEngine on
+
+RewriteRule ^songRecords/songs$ api/songDataService.php [NC]
+RewriteRule ^songRecords/songs/([0-9]{3})$ api/songDataService.php?songid=$1 [NC]
+RewriteRule ^songRecords/genres$ api/songGenreService.php [NC]
+RewriteRule ^songRecords/genres/(\w{3})$ api/songGenreService.php?genreid=$1 [NC]
